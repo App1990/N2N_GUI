@@ -15,62 +15,50 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1FCC0685919A44C1B6D5B95450481220"
+        "MsmKey" = "8:_2AED56FCBBD14605A6F33A6CBCC85756"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_309C98443AE14214A594AA91D4C4AF10"
+        "MsmKey" = "8:_518F687CE7AA4928823BBBD252E229CC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6CC35BCBC4A94DFBA1A33EDD51150904"
+        "MsmKey" = "8:_544BD3FA40EC480992CC2E1FF7967B41"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_794C09571FF445F285B4FE724AAA01F1"
+        "MsmKey" = "8:_825E9ECCD1054E9BA513B76DD4D807BB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_94C48CFBFF8E412BA90D5BEC51044F24"
+        "MsmKey" = "8:_B5055D74C1714717B8C3051B45FB3788"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B28547695F294BE6940200881C144D34"
+        "MsmKey" = "8:_C8EA0E63A1704B79A5F771F6250DAB1D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B44C745AB82946B9934A1F8B067F106B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B4858A38BF104524B030705778707718"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EB955583614641A8846DBB344A04D578"
+        "MsmKey" = "8:_FEE334139EEE4C8F9FE0265BEDE1F4A5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B44C745AB82946B9934A1F8B067F106B"
+        "OwnerKey" = "8:_2AED56FCBBD14605A6F33A6CBCC85756"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -123,23 +111,39 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_753B9D617BD14247BDC003FDFFF7F21E"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_6E2CB061039543D9B1DD2AB1A689B8A4"
             {
-            "Name" = "8:tap-windows-9.21.2.exe"
+            "Name" = "8:install tap-windows-9.21.2"
             "Condition" = "8:"
-            "Object" = "8:_309C98443AE14214A594AA91D4C4AF10"
+            "Object" = "8:_B5055D74C1714717B8C3051B45FB3788"
             "FileType" = "3:2"
             "InstallAction" = "3:1"
             "Arguments" = "8:/Install /S"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_BBD424F3_9EEA_425B_BA9F_BCF0EFDAE37E"
+            "Identifier" = "8:_2126D8A5_FDE7_47E3_AD6C_0BCEADE875FE"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -166,134 +170,14 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1FCC0685919A44C1B6D5B95450481220"
-            {
-            "SourcePath" = "8:..\\N2N_GUI\\bin\\edge_v2.exe"
-            "TargetName" = "8:edge_v2.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_EB57684C07C34619B38DD0E67CC80964"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_309C98443AE14214A594AA91D4C4AF10"
-            {
-            "SourcePath" = "8:..\\N2N_GUI\\bin\\tap-windows-9.21.2.exe"
-            "TargetName" = "8:tap-windows-9.21.2.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_EB57684C07C34619B38DD0E67CC80964"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6CC35BCBC4A94DFBA1A33EDD51150904"
-            {
-            "SourcePath" = "8:..\\N2N_GUI\\bin\\supernode_v2.exe"
-            "TargetName" = "8:supernode_v2.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_EB57684C07C34619B38DD0E67CC80964"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_794C09571FF445F285B4FE724AAA01F1"
-            {
-            "SourcePath" = "8:..\\N2N_GUI\\bin\\supernode_v1.exe"
-            "TargetName" = "8:supernode_v1.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_EB57684C07C34619B38DD0E67CC80964"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_94C48CFBFF8E412BA90D5BEC51044F24"
-            {
-            "SourcePath" = "8:..\\N2N_GUI\\bin\\N2N_GUI.pdb"
-            "TargetName" = "8:N2N_GUI.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_EB57684C07C34619B38DD0E67CC80964"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B28547695F294BE6940200881C144D34"
-            {
-            "SourcePath" = "8:..\\N2N_GUI\\bin\\N2N_GUI.exe.config"
-            "TargetName" = "8:N2N_GUI.exe.config"
-            "Tag" = "8:"
-            "Folder" = "8:_EB57684C07C34619B38DD0E67CC80964"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B44C745AB82946B9934A1F8B067F106B"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2AED56FCBBD14605A6F33A6CBCC85756"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:N2N_GUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B44C745AB82946B9934A1F8B067F106B"
+                    "_2AED56FCBBD14605A6F33A6CBCC85756"
                     {
                     "Name" = "8:N2N_GUI.exe"
                     "Attributes" = "3:512"
@@ -302,7 +186,7 @@
             "SourcePath" = "8:..\\N2N_GUI\\bin\\N2N_GUI.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_EB57684C07C34619B38DD0E67CC80964"
+            "Folder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -317,12 +201,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B4858A38BF104524B030705778707718"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_518F687CE7AA4928823BBBD252E229CC"
+            {
+            "SourcePath" = "8:..\\N2N_GUI\\Recourse\\icon.ico"
+            "TargetName" = "8:icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_44A4B976BE8A42359FD53A337877CEB5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_544BD3FA40EC480992CC2E1FF7967B41"
+            {
+            "SourcePath" = "8:..\\N2N_GUI\\bin\\supernode_v2.exe"
+            "TargetName" = "8:supernode_v2.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_825E9ECCD1054E9BA513B76DD4D807BB"
             {
             "SourcePath" = "8:..\\N2N_GUI\\bin\\edge_v1.exe"
             "TargetName" = "8:edge_v1.exe"
             "Tag" = "8:"
-            "Folder" = "8:_EB57684C07C34619B38DD0E67CC80964"
+            "Folder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -337,12 +261,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EB955583614641A8846DBB344A04D578"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B5055D74C1714717B8C3051B45FB3788"
             {
-            "SourcePath" = "8:..\\N2N_GUI\\bin\\icon.ico"
-            "TargetName" = "8:icon.ico"
+            "SourcePath" = "8:..\\N2N_GUI\\Recourse\\tap-windows-9.21.2.exe"
+            "TargetName" = "8:tap-windows-9.21.2.exe"
             "Tag" = "8:"
-            "Folder" = "8:_EB57684C07C34619B38DD0E67CC80964"
+            "Folder" = "8:_44A4B976BE8A42359FD53A337877CEB5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C8EA0E63A1704B79A5F771F6250DAB1D"
+            {
+            "SourcePath" = "8:..\\N2N_GUI\\bin\\edge_v2.exe"
+            "TargetName" = "8:edge_v2.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FEE334139EEE4C8F9FE0265BEDE1F4A5"
+            {
+            "SourcePath" = "8:..\\N2N_GUI\\bin\\supernode_v1.exe"
+            "TargetName" = "8:supernode_v1.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -395,6 +359,28 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_44A4B976BE8A42359FD53A337877CEB5"
+                    {
+                    "Name" = "8:Recourse"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_56F298DDD4DD4B9A819DA51F71A68DAF"
+                        "Folders"
+                        {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_4B84CFF12BED4D93A6BFBBD4370852DA"
+                    {
+                    "Name" = "8:bin"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_82D15A1DB61441838D4800DF615C1CF4"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
@@ -414,7 +400,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:N2N_GUI"
         "ProductCode" = "8:{50BFE60A-8289-4F20-A3D5-F52FACBC8E1D}"
-        "PackageCode" = "8:{555FA697-3E41-4C38-B30B-BC4F7CDCF3E8}"
+        "PackageCode" = "8:{62BF6984-19B1-4C43-8ADE-88086B154941}"
         "UpgradeCode" = "8:{DFFDD8B3-69AB-407E-9E01-4C3D5B64E83A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -534,7 +520,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_44A1E65011E84FDB864A66C0B4AEC11C"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1A521CB7F27C46B0B9ABC8E01FE9CC31"
             {
             "Name" = "8:N2N_GUI"
             "Arguments" = "8:"
@@ -542,10 +528,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_B44C745AB82946B9934A1F8B067F106B"
+            "Target" = "8:_2AED56FCBBD14605A6F33A6CBCC85756"
             "Folder" = "8:_587928998574406183FAA3DAA5B9A546"
-            "WorkingFolder" = "8:_EB57684C07C34619B38DD0E67CC80964"
-            "Icon" = "8:_EB955583614641A8846DBB344A04D578"
+            "WorkingFolder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
+            "Icon" = "8:_518F687CE7AA4928823BBBD252E229CC"
             "Feature" = "8:"
             }
         }

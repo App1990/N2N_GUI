@@ -23,7 +23,7 @@ namespace N2N_GUI
 
             btn__start.Enabled = true;
             btn__abort.Enabled = false;
-            string strFileFullName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "N2N_GUI.ini");
+            string strFileFullName = Path.Combine(Application.StartupPath, "N2N_GUI.ini");
 
             //<CONFIG_DATA><N2N_GUI_SETUP REMOTE_IP="106.15.40.169" REMOTE_PORT="10001" GROUP="WeGame" PASSWORD="p@ssw0rd" ASSIGNED_IP="10.0.0.101"></N2N_GUI_SETUP></CONFIG_DATA>
 
@@ -55,7 +55,7 @@ namespace N2N_GUI
                 string strXml = string.Format("<CONFIG_DATA><N2N_GUI_SETUP REMOTE_IP=\"{0}\" REMOTE_PORT=\"{1}\" GROUP=\"{2}\" PASSWORD=\"{3}\" ASSIGNED_IP=\"{4}\"></N2N_GUI_SETUP></CONFIG_DATA>"
                         , strRemoteIP, strRemotePort, strGroup, strPassword, strAssignedIp);
 
-                string strFileFullName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "N2N_GUI.ini");
+                string strFileFullName = Path.Combine(Application.StartupPath, "N2N_GUI.ini");
                 File.WriteAllText(strFileFullName, strXml);
 
                 CheckForIllegalCrossThreadCalls = false;
