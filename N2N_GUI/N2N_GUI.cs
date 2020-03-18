@@ -60,6 +60,15 @@ namespace N2N_GUI
 
                 CheckForIllegalCrossThreadCalls = false;
 
+                // 上次未释放的进程
+                Process[] oldProcesses = Process.GetProcessesByName("edge_v2");
+                foreach (Process oldProcess in oldProcesses)
+                {
+                    oldProcess.Kill();
+                    oldProcess.Close();
+                    oldProcess.Dispose();
+                }
+
                 p = new Process();
 
                 p.StartInfo.FileName = "edge_v2.exe";
