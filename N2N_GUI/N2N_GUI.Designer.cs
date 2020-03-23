@@ -43,7 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn__start = new System.Windows.Forms.Button();
             this.btn__abort = new System.Windows.Forms.Button();
-            this.lst__log = new System.Windows.Forms.ListBox();
+            this.txt__log = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -102,7 +102,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txt__group);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(13, 147);
+            this.groupBox2.Location = new System.Drawing.Point(326, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(292, 152);
             this.groupBox2.TabIndex = 1;
@@ -163,7 +163,7 @@
             // 
             // btn__start
             // 
-            this.btn__start.Location = new System.Drawing.Point(136, 315);
+            this.btn__start.Location = new System.Drawing.Point(136, 141);
             this.btn__start.Name = "btn__start";
             this.btn__start.Size = new System.Drawing.Size(75, 23);
             this.btn__start.TabIndex = 2;
@@ -173,7 +173,7 @@
             // 
             // btn__abort
             // 
-            this.btn__abort.Location = new System.Drawing.Point(230, 315);
+            this.btn__abort.Location = new System.Drawing.Point(230, 141);
             this.btn__abort.Name = "btn__abort";
             this.btn__abort.Size = new System.Drawing.Size(75, 23);
             this.btn__abort.TabIndex = 3;
@@ -181,21 +181,24 @@
             this.btn__abort.UseVisualStyleBackColor = true;
             this.btn__abort.Click += new System.EventHandler(this.btn__abort_Click);
             // 
-            // lst__log
+            // txt__log
             // 
-            this.lst__log.FormattingEnabled = true;
-            this.lst__log.ItemHeight = 12;
-            this.lst__log.Location = new System.Drawing.Point(320, 19);
-            this.lst__log.Name = "lst__log";
-            this.lst__log.Size = new System.Drawing.Size(355, 280);
-            this.lst__log.TabIndex = 4;
+            this.txt__log.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt__log.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt__log.ForeColor = System.Drawing.Color.White;
+            this.txt__log.Location = new System.Drawing.Point(12, 179);
+            this.txt__log.Multiline = true;
+            this.txt__log.Name = "txt__log";
+            this.txt__log.ReadOnly = true;
+            this.txt__log.Size = new System.Drawing.Size(606, 217);
+            this.txt__log.TabIndex = 5;
             // 
             // N2N_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 354);
-            this.Controls.Add(this.lst__log);
+            this.ClientSize = new System.Drawing.Size(630, 408);
+            this.Controls.Add(this.txt__log);
             this.Controls.Add(this.btn__abort);
             this.Controls.Add(this.btn__start);
             this.Controls.Add(this.groupBox2);
@@ -209,6 +212,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -228,7 +232,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn__start;
         private System.Windows.Forms.Button btn__abort;
-        private System.Windows.Forms.ListBox lst__log;
+        private System.Windows.Forms.TextBox txt__log;
     }
 }
 

@@ -400,7 +400,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:N2N_GUI"
         "ProductCode" = "8:{50BFE60A-8289-4F20-A3D5-F52FACBC8E1D}"
-        "PackageCode" = "8:{62BF6984-19B1-4C43-8ADE-88086B154941}"
+        "PackageCode" = "8:{AE844550-DA5B-4D88-A15E-A155BB3656FE}"
         "UpgradeCode" = "8:{DFFDD8B3-69AB-407E-9E01-4C3D5B64E83A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

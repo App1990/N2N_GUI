@@ -100,8 +100,7 @@ namespace N2N_GUI
             {
                 if (!String.IsNullOrEmpty(outLine.Data))
                 {
-                    lst__log.Items.Add(outLine.Data);
-                    lst__log.TopIndex = lst__log.Items.Count - lst__log.Height / lst__log.ItemHeight;
+                    txt__log.AppendText(outLine.Data + "\r\n");
                 }
             }
             catch (Exception ex)
@@ -122,7 +121,7 @@ namespace N2N_GUI
 
                 btn__start.Enabled = true;
                 btn__abort.Enabled = false;
-                lst__log.Items.Add(string.Format("{0} Abort!", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
+                txt__log.AppendText(string.Format("{0} Abort!\r\n", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
             }
             catch (Exception ex)
             {
