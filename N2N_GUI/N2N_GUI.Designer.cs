@@ -104,7 +104,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(326, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(292, 152);
+            this.groupBox2.Size = new System.Drawing.Size(292, 100);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edge(Local Settings)";
@@ -113,9 +113,11 @@
             // 
             this.txt__assigned_ip.Location = new System.Drawing.Point(123, 113);
             this.txt__assigned_ip.Name = "txt__assigned_ip";
+            this.txt__assigned_ip.ReadOnly = true;
             this.txt__assigned_ip.Size = new System.Drawing.Size(143, 21);
             this.txt__assigned_ip.TabIndex = 5;
             this.txt__assigned_ip.Text = "10.0.0.101";
+            this.txt__assigned_ip.Visible = false;
             // 
             // label5
             // 
@@ -125,6 +127,7 @@
             this.label5.Size = new System.Drawing.Size(71, 12);
             this.label5.TabIndex = 4;
             this.label5.Text = "Assigned IP";
+            this.label5.Visible = false;
             // 
             // txt__password
             // 
@@ -163,7 +166,7 @@
             // 
             // btn__start
             // 
-            this.btn__start.Location = new System.Drawing.Point(136, 141);
+            this.btn__start.Location = new System.Drawing.Point(449, 373);
             this.btn__start.Name = "btn__start";
             this.btn__start.Size = new System.Drawing.Size(75, 23);
             this.btn__start.TabIndex = 2;
@@ -173,7 +176,7 @@
             // 
             // btn__abort
             // 
-            this.btn__abort.Location = new System.Drawing.Point(230, 141);
+            this.btn__abort.Location = new System.Drawing.Point(543, 373);
             this.btn__abort.Name = "btn__abort";
             this.btn__abort.Size = new System.Drawing.Size(75, 23);
             this.btn__abort.TabIndex = 3;
@@ -186,11 +189,11 @@
             this.txt__log.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt__log.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txt__log.ForeColor = System.Drawing.Color.White;
-            this.txt__log.Location = new System.Drawing.Point(12, 179);
+            this.txt__log.Location = new System.Drawing.Point(12, 118);
             this.txt__log.Multiline = true;
             this.txt__log.Name = "txt__log";
             this.txt__log.ReadOnly = true;
-            this.txt__log.Size = new System.Drawing.Size(606, 217);
+            this.txt__log.Size = new System.Drawing.Size(606, 249);
             this.txt__log.TabIndex = 5;
             // 
             // N2N_GUI
@@ -200,9 +203,9 @@
             this.ClientSize = new System.Drawing.Size(630, 408);
             this.Controls.Add(this.txt__log);
             this.Controls.Add(this.btn__abort);
-            this.Controls.Add(this.btn__start);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btn__start);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "N2N_GUI";
             this.Text = "N2N GUI";

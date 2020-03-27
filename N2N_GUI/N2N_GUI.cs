@@ -70,10 +70,12 @@ namespace N2N_GUI
                 }
 
                 p = new Process();
-
                 p.StartInfo.FileName = "edge_v2.exe";
                 p.StartInfo.WorkingDirectory = Application.StartupPath;
-                p.StartInfo.Arguments = string.Format("-a {0} -c {1} -k {2} -l {3}:{4}", strAssignedIp, strGroup, strPassword, strRemoteIP, strRemotePort);//传递的参数
+
+                // 传递的参数
+                p.StartInfo.Arguments = string.Format("-r -a dhcp:{0} -c {1} -k {2} -l {0}:{3}", strRemoteIP, strGroup, strPassword, strRemotePort);// 采用DHCP动态分配IP
+                //p.StartInfo.Arguments = string.Format("-a {0} -c {1} -k {2} -l {3}:{4}", strAssignedIp, strGroup, strPassword, strRemoteIP, strRemotePort);
 
                 p.StartInfo.UseShellExecute = false;    //是否使用操作系统shell启动
                 p.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
