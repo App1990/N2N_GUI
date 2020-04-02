@@ -4,7 +4,7 @@
 
 #yum install -y subversion openssl-devel cmake net-tools git gcc gcc-c++ dhcp zip unzip 
 
-yum install -y openssl-devel cmake net-tools git gcc gcc-c++ dhcp zip unzip 
+sudo yum install -y openssl-devel cmake net-tools git gcc gcc-c++ dhcp zip unzip 
 
 wget --no-check-certificate -O n2n.zip https://codeload.github.com/meyerd/n2n/zip/master
 
