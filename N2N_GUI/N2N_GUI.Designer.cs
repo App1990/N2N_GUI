@@ -44,6 +44,7 @@
             this.btn__start = new System.Windows.Forms.Button();
             this.btn__abort = new System.Windows.Forms.Button();
             this.txt__log = new System.Windows.Forms.TextBox();
+            this.btn__restart = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -166,7 +167,7 @@
             // 
             // btn__start
             // 
-            this.btn__start.Location = new System.Drawing.Point(449, 373);
+            this.btn__start.Location = new System.Drawing.Point(355, 373);
             this.btn__start.Name = "btn__start";
             this.btn__start.Size = new System.Drawing.Size(75, 23);
             this.btn__start.TabIndex = 2;
@@ -176,7 +177,7 @@
             // 
             // btn__abort
             // 
-            this.btn__abort.Location = new System.Drawing.Point(543, 373);
+            this.btn__abort.Location = new System.Drawing.Point(449, 373);
             this.btn__abort.Name = "btn__abort";
             this.btn__abort.Size = new System.Drawing.Size(75, 23);
             this.btn__abort.TabIndex = 3;
@@ -196,11 +197,22 @@
             this.txt__log.Size = new System.Drawing.Size(606, 249);
             this.txt__log.TabIndex = 5;
             // 
+            // btn__restart
+            // 
+            this.btn__restart.Location = new System.Drawing.Point(543, 373);
+            this.btn__restart.Name = "btn__restart";
+            this.btn__restart.Size = new System.Drawing.Size(75, 23);
+            this.btn__restart.TabIndex = 6;
+            this.btn__restart.Text = "Restart";
+            this.btn__restart.UseVisualStyleBackColor = true;
+            this.btn__restart.Click += new System.EventHandler(this.btn__restart_Click);
+            // 
             // N2N_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 408);
+            this.Controls.Add(this.btn__restart);
             this.Controls.Add(this.txt__log);
             this.Controls.Add(this.btn__abort);
             this.Controls.Add(this.groupBox2);
@@ -236,6 +248,7 @@
         private System.Windows.Forms.Button btn__start;
         private System.Windows.Forms.Button btn__abort;
         private System.Windows.Forms.TextBox txt__log;
+        private System.Windows.Forms.Button btn__restart;
     }
 }
 

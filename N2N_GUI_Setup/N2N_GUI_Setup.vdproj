@@ -347,6 +347,17 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_7A91A6C095CF4C0FAAB22C4F38382478"
+                    {
+                    "Name" = "8:N2N"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_5A4DDDF21A324A4483F252A479A112AF"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_EB57684C07C34619B38DD0E67CC80964"
@@ -400,7 +411,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:N2N_GUI"
         "ProductCode" = "8:{50BFE60A-8289-4F20-A3D5-F52FACBC8E1D}"
-        "PackageCode" = "8:{AE844550-DA5B-4D88-A15E-A155BB3656FE}"
+        "PackageCode" = "8:{841A7302-2719-4B48-B928-8089E6167632}"
         "UpgradeCode" = "8:{DFFDD8B3-69AB-407E-9E01-4C3D5B64E83A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -520,6 +531,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0A518575E313417481FBA1B320B1913C"
+            {
+            "Name" = "8:N2N_GUI"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_2AED56FCBBD14605A6F33A6CBCC85756"
+            "Folder" = "8:_7A91A6C095CF4C0FAAB22C4F38382478"
+            "WorkingFolder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
+            "Icon" = "8:_518F687CE7AA4928823BBBD252E229CC"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1A521CB7F27C46B0B9ABC8E01FE9CC31"
             {
             "Name" = "8:N2N_GUI"

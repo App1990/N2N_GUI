@@ -43,6 +43,56 @@ namespace N2N_GUI
 
         private void btn__start_Click(object sender, EventArgs e)
         {
+            _StartEdgeNode();
+        }
+
+        private void btn__abort_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (p != null)
+                {
+                    p.Kill();
+                    p.Close();
+                }
+
+                btn__start.Enabled = true;
+                btn__abort.Enabled = false;
+                txt__log.AppendText(string.Format("{0} Abort!\r\n", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (p != null) p.Dispose();
+            }
+        }
+
+        private void N2N_GUI_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (p != null && btn__abort.Enabled)
+            {
+                p.Kill();
+                p.Close();
+                p.Dispose();
+            }
+        }
+
+        private void btn__restart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _StartEdgeNode();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void _StartEdgeNode() {
             try
             {
                 // 保存配置信息
@@ -82,7 +132,7 @@ namespace N2N_GUI
                 p.StartInfo.RedirectStandardOutput = true;//由调用程序获取输出信息
                 p.StartInfo.RedirectStandardError = true;//重定向标准错误输出
                 p.StartInfo.CreateNoWindow = true;//不显示程序窗口
-                p.OutputDataReceived += new DataReceivedEventHandler(OutputHandler);
+                p.OutputDataReceived += new DataReceivedEventHandler(_OutputHandler);
 
                 p.Start();
                 p.BeginOutputReadLine();
@@ -96,7 +146,7 @@ namespace N2N_GUI
             }
         }
 
-        private void OutputHandler(object sendingProcess, DataReceivedEventArgs outLine)
+        private void _OutputHandler(object sendingProcess, DataReceivedEventArgs outLine)
         {
             try
             {
@@ -108,40 +158,6 @@ namespace N2N_GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void btn__abort_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (p != null)
-                {
-                    p.Kill();
-                    p.Close();
-                }
-
-                btn__start.Enabled = true;
-                btn__abort.Enabled = false;
-                txt__log.AppendText(string.Format("{0} Abort!\r\n", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                if (p != null) p.Dispose();
-            }
-        }
-
-        private void N2N_GUI_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (p != null && btn__abort.Enabled)
-            {
-                p.Kill();
-                p.Close();
-                p.Dispose();
             }
         }
     }
