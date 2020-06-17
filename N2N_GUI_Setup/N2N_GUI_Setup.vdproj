@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2E6B1D4118D14417841020D40A90FCB2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_518F687CE7AA4928823BBBD252E229CC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -185,6 +191,26 @@
                 }
             "SourcePath" = "8:..\\N2N_GUI\\bin\\N2N_GUI.exe"
             "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2E6B1D4118D14417841020D40A90FCB2"
+            {
+            "SourcePath" = "8:C:\\Windows\\System32\\msiexec.exe"
+            "TargetName" = "8:Uninstall.exe"
             "Tag" = "8:"
             "Folder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
             "Condition" = "8:"
@@ -411,8 +437,8 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:N2N_GUI"
         "ProductCode" = "8:{50BFE60A-8289-4F20-A3D5-F52FACBC8E1D}"
-        "PackageCode" = "8:{779E2558-CB64-4757-98B0-7A3892C54AF7}"
-        "UpgradeCode" = "8:{DFFDD8B3-69AB-407E-9E01-4C3D5B64E83A}"
+        "PackageCode" = "8:{179E86EA-2B7E-4637-AA31-32A4CBD9D983}"
+        "UpgradeCode" = "8:{8CA5F7EA-FCE8-4679-8C23-117AD883B019}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
@@ -557,6 +583,20 @@
             "Folder" = "8:_587928998574406183FAA3DAA5B9A546"
             "WorkingFolder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
             "Icon" = "8:_518F687CE7AA4928823BBBD252E229CC"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2413E677A79E4D3F859992DF1527F910"
+            {
+            "Name" = "8:Uninstall"
+            "Arguments" = "8:/x {50BFE60A-8289-4F20-A3D5-F52FACBC8E1D}"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_2E6B1D4118D14417841020D40A90FCB2"
+            "Folder" = "8:_7A91A6C095CF4C0FAAB22C4F38382478"
+            "WorkingFolder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
