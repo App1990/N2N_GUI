@@ -35,8 +35,6 @@
             this.txt__remote_ip = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt__assigned_ip = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txt__password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt__group = new System.Windows.Forms.TextBox();
@@ -45,6 +43,8 @@
             this.btn__abort = new System.Windows.Forms.Button();
             this.txt__log = new System.Windows.Forms.TextBox();
             this.btn__restart = new System.Windows.Forms.Button();
+            this.check__assigned_ip = new System.Windows.Forms.CheckBox();
+            this.txt__assigned_ip = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -97,8 +97,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txt__assigned_ip);
-            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txt__password);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txt__group);
@@ -109,26 +107,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edge(Local Settings)";
-            // 
-            // txt__assigned_ip
-            // 
-            this.txt__assigned_ip.Location = new System.Drawing.Point(123, 113);
-            this.txt__assigned_ip.Name = "txt__assigned_ip";
-            this.txt__assigned_ip.ReadOnly = true;
-            this.txt__assigned_ip.Size = new System.Drawing.Size(143, 21);
-            this.txt__assigned_ip.TabIndex = 5;
-            this.txt__assigned_ip.Text = "10.0.0.101";
-            this.txt__assigned_ip.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 116);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 12);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Assigned IP";
-            this.label5.Visible = false;
             // 
             // txt__password
             // 
@@ -207,11 +185,32 @@
             this.btn__restart.UseVisualStyleBackColor = true;
             this.btn__restart.Click += new System.EventHandler(this.btn__restart_Click);
             // 
+            // check__assigned_ip
+            // 
+            this.check__assigned_ip.AutoSize = true;
+            this.check__assigned_ip.Location = new System.Drawing.Point(12, 377);
+            this.check__assigned_ip.Name = "check__assigned_ip";
+            this.check__assigned_ip.Size = new System.Drawing.Size(150, 16);
+            this.check__assigned_ip.TabIndex = 7;
+            this.check__assigned_ip.Text = "Assigned IP Manually?";
+            this.check__assigned_ip.UseVisualStyleBackColor = true;
+            this.check__assigned_ip.CheckedChanged += new System.EventHandler(this.check__assigned_ip_CheckedChanged);
+            // 
+            // txt__assigned_ip
+            // 
+            this.txt__assigned_ip.Location = new System.Drawing.Point(161, 375);
+            this.txt__assigned_ip.Name = "txt__assigned_ip";
+            this.txt__assigned_ip.Size = new System.Drawing.Size(144, 21);
+            this.txt__assigned_ip.TabIndex = 8;
+            this.txt__assigned_ip.Visible = false;
+            // 
             // N2N_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 408);
+            this.Controls.Add(this.txt__assigned_ip);
+            this.Controls.Add(this.check__assigned_ip);
             this.Controls.Add(this.btn__restart);
             this.Controls.Add(this.txt__log);
             this.Controls.Add(this.btn__abort);
@@ -243,12 +242,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt__password;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt__assigned_ip;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn__start;
         private System.Windows.Forms.Button btn__abort;
         private System.Windows.Forms.TextBox txt__log;
         private System.Windows.Forms.Button btn__restart;
+        private System.Windows.Forms.CheckBox check__assigned_ip;
+        private System.Windows.Forms.TextBox txt__assigned_ip;
     }
 }
 

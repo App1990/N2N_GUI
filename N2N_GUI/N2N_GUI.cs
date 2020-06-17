@@ -38,6 +38,12 @@ namespace N2N_GUI
                 txt__group.Text = xmlDoc.SelectSingleNode("//@GROUP").Value;
                 txt__password.Text = xmlDoc.SelectSingleNode("//@PASSWORD").Value;
                 txt__assigned_ip.Text = xmlDoc.SelectSingleNode("//@ASSIGNED_IP").Value;
+
+                XmlNode objXmlNode = xmlDoc.SelectSingleNode("//@ASSIGNED_IP_MANUALLY");
+                bool blnAssignedIPManually = objXmlNode != null && objXmlNode.Value == "-1";
+
+                txt__assigned_ip.Visible = blnAssignedIPManually;
+                check__assigned_ip.Checked = blnAssignedIPManually;
             }
         }
 
@@ -102,8 +108,9 @@ namespace N2N_GUI
                 string strGroup = txt__group.Text;
                 string strPassword = txt__password.Text;
                 string strAssignedIp = txt__assigned_ip.Text;
-                string strXml = string.Format("<CONFIG_DATA><N2N_GUI_SETUP REMOTE_IP=\"{0}\" REMOTE_PORT=\"{1}\" GROUP=\"{2}\" PASSWORD=\"{3}\" ASSIGNED_IP=\"{4}\"></N2N_GUI_SETUP></CONFIG_DATA>"
-                        , strRemoteIP, strRemotePort, strGroup, strPassword, strAssignedIp);
+                string strAssignedIPManually = check__assigned_ip.Checked ? "-1" : "0";
+                string strXml = string.Format("<CONFIG_DATA><N2N_GUI_SETUP REMOTE_IP=\"{0}\" REMOTE_PORT=\"{1}\" GROUP=\"{2}\" PASSWORD=\"{3}\" ASSIGNED_IP=\"{4}\" ASSIGNED_IP_MANUALLY=\"{5}\"></N2N_GUI_SETUP></CONFIG_DATA>"
+                        , strRemoteIP, strRemotePort, strGroup, strPassword, strAssignedIp, strAssignedIPManually);
 
                 string strFileFullName = Path.Combine(Application.StartupPath, "N2N_GUI.ini");
                 File.WriteAllText(strFileFullName, strXml);
@@ -123,9 +130,12 @@ namespace N2N_GUI
                 p.StartInfo.FileName = "edge_v2.exe";
                 p.StartInfo.WorkingDirectory = Application.StartupPath;
 
-                // 传递的参数
-                p.StartInfo.Arguments = string.Format("-r -a dhcp:{0} -c {1} -k {2} -l {0}:{3}", strRemoteIP, strGroup, strPassword, strRemotePort);// 采用DHCP动态分配IP
-                //p.StartInfo.Arguments = string.Format("-a {0} -c {1} -k {2} -l {3}:{4}", strAssignedIp, strGroup, strPassword, strRemoteIP, strRemotePort);
+                // 传递的参数；采用DHCP动态分配IP
+                p.StartInfo.Arguments = string.Format("-r -a dhcp:{0} -c {1} -k {2} -l {0}:{3}", strRemoteIP, strGroup, strPassword, strRemotePort);
+
+                // 手动指定IP地址
+                if (strAssignedIPManually == "-1")
+                    p.StartInfo.Arguments = string.Format("-a {0} -c {1} -k {2} -l {3}:{4}", strAssignedIp, strGroup, strPassword, strRemoteIP, strRemotePort);
 
                 p.StartInfo.UseShellExecute = false;    //是否使用操作系统shell启动
                 p.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
@@ -159,6 +169,11 @@ namespace N2N_GUI
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void check__assigned_ip_CheckedChanged(object sender, EventArgs e)
+        {
+            txt__assigned_ip.Visible = check__assigned_ip.Checked;
         }
     }
 }
