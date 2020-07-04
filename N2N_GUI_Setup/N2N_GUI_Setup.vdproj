@@ -57,6 +57,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C97CB6FD59E44192A2ABDBD7F1E111D8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FEE334139EEE4C8F9FE0265BEDE1F4A5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -65,6 +71,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2AED56FCBBD14605A6F33A6CBCC85756"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C97CB6FD59E44192A2ABDBD7F1E111D8"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -139,6 +151,34 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_03FD521C7EBD442A98A1C72135E7F5CC"
+            {
+            "Name" = "8:InstallHelper.dll"
+            "Condition" = "8:"
+            "Object" = "8:_C97CB6FD59E44192A2ABDBD7F1E111D8"
+            "FileType" = "3:1"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:2"
+            "Identifier" = "8:_E25C06D2_76C4_4648_AE4A_B5FDA1BF35AC"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:/rootPath=\"[TARGETDIR]/\""
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_397DD2937943495BB67B0203D3F529FE"
+            {
+            "Name" = "8:InstallHelper.dll"
+            "Condition" = "8:"
+            "Object" = "8:_C97CB6FD59E44192A2ABDBD7F1E111D8"
+            "FileType" = "3:1"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_0FF6011D_0DAA_4D4E_867D_3D63CAD104E1"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:/rootPath=\"[TARGETDIR]/\""
+            }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_6E2CB061039543D9B1DD2AB1A689B8A4"
             {
             "Name" = "8:install tap-windows-9.21.2"
@@ -313,6 +353,37 @@
             "TargetName" = "8:edge_v2.exe"
             "Tag" = "8:"
             "Folder" = "8:_4B84CFF12BED4D93A6BFBBD4370852DA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C97CB6FD59E44192A2ABDBD7F1E111D8"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:InstallHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_C97CB6FD59E44192A2ABDBD7F1E111D8"
+                    {
+                    "Name" = "8:InstallHelper.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\InstallHelper\\bin\\Debug\\InstallHelper.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_EB57684C07C34619B38DD0E67CC80964"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"

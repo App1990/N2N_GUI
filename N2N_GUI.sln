@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N2N_GUI", "N2N_GUI\N2N_GUI.
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "N2N_GUI_Setup", "N2N_GUI_Setup\N2N_GUI_Setup.vdproj", "{126F5AEF-AD60-485D-8C61-F4CEA7287ECE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstallHelper", "InstallHelper\InstallHelper.csproj", "{D9DA91D2-44B8-4A65-91F3-A2BB72944792}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{25705DEB-4E00-4542-8B48-8AFFA9B26EB8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{126F5AEF-AD60-485D-8C61-F4CEA7287ECE}.Debug|Any CPU.ActiveCfg = Debug
 		{126F5AEF-AD60-485D-8C61-F4CEA7287ECE}.Release|Any CPU.ActiveCfg = Release
+		{D9DA91D2-44B8-4A65-91F3-A2BB72944792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DA91D2-44B8-4A65-91F3-A2BB72944792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DA91D2-44B8-4A65-91F3-A2BB72944792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DA91D2-44B8-4A65-91F3-A2BB72944792}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,30 +20,40 @@ namespace N2N_GUI
         public N2N_GUI()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
 
             btn__start.Enabled = true;
             btn__abort.Enabled = false;
-            string strFileFullName = Path.Combine(Application.StartupPath, "N2N_GUI.ini");
 
-            //<CONFIG_DATA><N2N_GUI_SETUP REMOTE_IP="106.15.40.169" REMOTE_PORT="10001" GROUP="WeGame" PASSWORD="p@ssw0rd" ASSIGNED_IP="10.0.0.101"></N2N_GUI_SETUP></CONFIG_DATA>
+            string strAppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string strFileFullName = Path.Combine(strAppDataPath, Application.ProductName, "profile.xml");
+
+            string strProductDataPath = Path.Combine(strAppDataPath, Application.ProductName);
+            if (!Directory.Exists(strProductDataPath)) Directory.CreateDirectory(strProductDataPath);
+
+            // {select_index:0,server_list:[{server_ip:"106.15.40.169",server_port:10001,group:"WeGame",password:"p@ssw0rd",dhcp_mode:0,client_ip:10.0.0.101}]}
+            // <SERVER_LIST><SERVER_ITEM REMOTE_IP="106.15.40.169" REMOTE_PORT="10001" GROUP="WeGame" PASSWORD="p@ssw0rd" ASSIGNED_IP="10.0.0.101" DHCP_MODE="0" IS_SELECTED="-1"></SERVER_ITEM></SERVER_LIST>
 
             if (File.Exists(strFileFullName))
             {
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.LoadXml(File.ReadAllText(strFileFullName));
 
-                txt__remote_ip.Text = xmlDoc.SelectSingleNode("//@REMOTE_IP").Value;
-                txt__remote_port.Text = xmlDoc.SelectSingleNode("//@REMOTE_PORT").Value;
+                XmlNode xmlNode = xmlDoc.SelectSingleNode("//SERVER_ITEM[@IS_SELECTED='-1']");
+                if (xmlNode == null) return;
 
-                txt__group.Text = xmlDoc.SelectSingleNode("//@GROUP").Value;
-                txt__password.Text = xmlDoc.SelectSingleNode("//@PASSWORD").Value;
-                txt__assigned_ip.Text = xmlDoc.SelectSingleNode("//@ASSIGNED_IP").Value;
+                txt__remote_ip.Text = xmlNode.SelectSingleNode("@REMOTE_IP").Value;
+                txt__remote_port.Text = xmlNode.SelectSingleNode("@REMOTE_PORT").Value;
 
-                XmlNode objXmlNode = xmlDoc.SelectSingleNode("//@ASSIGNED_IP_MANUALLY");
-                bool blnAssignedIPManually = objXmlNode != null && objXmlNode.Value == "-1";
+                txt__group.Text = xmlNode.SelectSingleNode("@GROUP").Value;
+                txt__password.Text = xmlNode.SelectSingleNode("@PASSWORD").Value;
+                txt__assigned_ip.Text = xmlNode.SelectSingleNode("@ASSIGNED_IP").Value;
 
-                txt__assigned_ip.Visible = blnAssignedIPManually;
-                check__assigned_ip.Checked = blnAssignedIPManually;
+                xmlNode = xmlNode.SelectSingleNode("@DHCP_MODE");
+                bool blnDHCPMode = xmlNode != null && xmlNode.Value == "-1";
+
+                txt__assigned_ip.Visible = blnDHCPMode;
+                check__assigned_ip.Checked = blnDHCPMode;
             }
         }
 
@@ -98,7 +108,8 @@ namespace N2N_GUI
             }
         }
 
-        private void _StartEdgeNode() {
+        private void _StartEdgeNode()
+        {
             try
             {
                 // 保存配置信息
@@ -109,10 +120,12 @@ namespace N2N_GUI
                 string strPassword = txt__password.Text;
                 string strAssignedIp = txt__assigned_ip.Text;
                 string strAssignedIPManually = check__assigned_ip.Checked ? "-1" : "0";
-                string strXml = string.Format("<CONFIG_DATA><N2N_GUI_SETUP REMOTE_IP=\"{0}\" REMOTE_PORT=\"{1}\" GROUP=\"{2}\" PASSWORD=\"{3}\" ASSIGNED_IP=\"{4}\" ASSIGNED_IP_MANUALLY=\"{5}\"></N2N_GUI_SETUP></CONFIG_DATA>"
+                string strXml = string.Format("<SERVER_LIST><SERVER_ITEM REMOTE_IP=\"{0}\" REMOTE_PORT=\"{1}\" GROUP=\"{2}\" PASSWORD=\"{3}\" ASSIGNED_IP=\"{4}\" DHCP_MODE=\"{5}\" IS_SELECTED=\"-1\"></SERVER_ITEM></SERVER_LIST>"
                         , strRemoteIP, strRemotePort, strGroup, strPassword, strAssignedIp, strAssignedIPManually);
 
-                string strFileFullName = Path.Combine(Application.StartupPath, "N2N_GUI.ini");
+                string strAppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string strFileFullName = Path.Combine(strAppDataPath, Application.ProductName, "profile.xml");
+
                 File.WriteAllText(strFileFullName, strXml);
 
                 CheckForIllegalCrossThreadCalls = false;
@@ -160,7 +173,7 @@ namespace N2N_GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(outLine.Data))
+                if (!string.IsNullOrEmpty(outLine.Data))
                 {
                     txt__log.AppendText(outLine.Data + "\r\n");
                 }
