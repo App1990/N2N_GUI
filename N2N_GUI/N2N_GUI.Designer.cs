@@ -35,6 +35,8 @@
             this.txt__remote_ip = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.check__assigned_ip = new System.Windows.Forms.CheckBox();
+            this.txt__assigned_ip = new System.Windows.Forms.TextBox();
             this.txt__password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt__group = new System.Windows.Forms.TextBox();
@@ -43,8 +45,6 @@
             this.btn__abort = new System.Windows.Forms.Button();
             this.txt__log = new System.Windows.Forms.TextBox();
             this.btn__restart = new System.Windows.Forms.Button();
-            this.check__assigned_ip = new System.Windows.Forms.CheckBox();
-            this.txt__assigned_ip = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +97,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.check__assigned_ip);
+            this.groupBox2.Controls.Add(this.txt__assigned_ip);
             this.groupBox2.Controls.Add(this.txt__password);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txt__group);
@@ -108,9 +110,28 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edge(Local Settings)";
             // 
+            // check__assigned_ip
+            // 
+            this.check__assigned_ip.AutoSize = true;
+            this.check__assigned_ip.Location = new System.Drawing.Point(27, 76);
+            this.check__assigned_ip.Name = "check__assigned_ip";
+            this.check__assigned_ip.Size = new System.Drawing.Size(90, 16);
+            this.check__assigned_ip.TabIndex = 7;
+            this.check__assigned_ip.Text = "Static IP ?";
+            this.check__assigned_ip.UseVisualStyleBackColor = true;
+            this.check__assigned_ip.CheckedChanged += new System.EventHandler(this.check__assigned_ip_CheckedChanged);
+            // 
+            // txt__assigned_ip
+            // 
+            this.txt__assigned_ip.Location = new System.Drawing.Point(122, 74);
+            this.txt__assigned_ip.Name = "txt__assigned_ip";
+            this.txt__assigned_ip.Size = new System.Drawing.Size(144, 21);
+            this.txt__assigned_ip.TabIndex = 8;
+            this.txt__assigned_ip.Visible = false;
+            // 
             // txt__password
             // 
-            this.txt__password.Location = new System.Drawing.Point(123, 74);
+            this.txt__password.Location = new System.Drawing.Point(123, 47);
             this.txt__password.Name = "txt__password";
             this.txt__password.PasswordChar = '*';
             this.txt__password.Size = new System.Drawing.Size(143, 21);
@@ -120,7 +141,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 77);
+            this.label4.Location = new System.Drawing.Point(25, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 2;
@@ -128,7 +149,7 @@
             // 
             // txt__group
             // 
-            this.txt__group.Location = new System.Drawing.Point(123, 37);
+            this.txt__group.Location = new System.Drawing.Point(123, 20);
             this.txt__group.Name = "txt__group";
             this.txt__group.Size = new System.Drawing.Size(143, 21);
             this.txt__group.TabIndex = 1;
@@ -137,7 +158,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 40);
+            this.label3.Location = new System.Drawing.Point(25, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 12);
             this.label3.TabIndex = 0;
@@ -185,32 +206,11 @@
             this.btn__restart.UseVisualStyleBackColor = true;
             this.btn__restart.Click += new System.EventHandler(this.btn__restart_Click);
             // 
-            // check__assigned_ip
-            // 
-            this.check__assigned_ip.AutoSize = true;
-            this.check__assigned_ip.Location = new System.Drawing.Point(12, 377);
-            this.check__assigned_ip.Name = "check__assigned_ip";
-            this.check__assigned_ip.Size = new System.Drawing.Size(150, 16);
-            this.check__assigned_ip.TabIndex = 7;
-            this.check__assigned_ip.Text = "Assigned IP Manually?";
-            this.check__assigned_ip.UseVisualStyleBackColor = true;
-            this.check__assigned_ip.CheckedChanged += new System.EventHandler(this.check__assigned_ip_CheckedChanged);
-            // 
-            // txt__assigned_ip
-            // 
-            this.txt__assigned_ip.Location = new System.Drawing.Point(161, 375);
-            this.txt__assigned_ip.Name = "txt__assigned_ip";
-            this.txt__assigned_ip.Size = new System.Drawing.Size(144, 21);
-            this.txt__assigned_ip.TabIndex = 8;
-            this.txt__assigned_ip.Visible = false;
-            // 
             // N2N_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 408);
-            this.Controls.Add(this.txt__assigned_ip);
-            this.Controls.Add(this.check__assigned_ip);
             this.Controls.Add(this.btn__restart);
             this.Controls.Add(this.txt__log);
             this.Controls.Add(this.btn__abort);
