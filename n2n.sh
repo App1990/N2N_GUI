@@ -6,7 +6,8 @@
 
 sudo yum install -y openssl-devel cmake net-tools git gcc gcc-c++ dhcp zip unzip 
 
-wget --no-check-certificate -O n2n.zip https://codeload.github.com/meyerd/n2n/zip/master
+curl -o n2n.zip https://codeload.github.com/meyerd/n2n/zip/master
+#wget --no-check-certificate -O n2n.zip https://codeload.github.com/meyerd/n2n/zip/master
 
 unzip n2n.zip
 
