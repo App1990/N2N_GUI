@@ -193,6 +193,7 @@
             this.txt__log.Multiline = true;
             this.txt__log.Name = "txt__log";
             this.txt__log.ReadOnly = true;
+            this.txt__log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt__log.Size = new System.Drawing.Size(606, 249);
             this.txt__log.TabIndex = 5;
             // 
