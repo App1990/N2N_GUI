@@ -57,7 +57,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Recourse\icon.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -124,6 +124,7 @@
     <Content Include="bin\edge_v2.exe" />
     <Content Include="bin\supernode_v1.exe" />
     <Content Include="bin\supernode_v2.exe" />
+    <Content Include="icon.ico" />
     <Content Include="Recourse\icon.ico" />
     <Content Include="Recourse\tap-windows-9.21.2.exe" />
   </ItemGroup>

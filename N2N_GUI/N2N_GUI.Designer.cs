@@ -1,4 +1,7 @@
-﻿namespace N2N_GUI
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace N2N_GUI
 {
     partial class N2N_GUI
     {
@@ -20,235 +23,281 @@
             base.Dispose(disposing);
         }
 
-        #region Windows 窗体设计器生成的代码
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// 设计器支持所需的方法 - 不要修改
-        /// 使用代码编辑器修改此方法的内容。
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(N2N_GUI));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt__remote_port = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt__remote_ip = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.check__assigned_ip = new System.Windows.Forms.CheckBox();
-            this.txt__assigned_ip = new System.Windows.Forms.TextBox();
-            this.txt__password = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt__group = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn__start = new System.Windows.Forms.Button();
-            this.btn__abort = new System.Windows.Forms.Button();
-            this.txt__log = new System.Windows.Forms.TextBox();
-            this.btn__restart = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            comboBox__version = new ComboBox();
+            label5 = new Label();
+            txt__remote_port = new TextBox();
+            label2 = new Label();
+            txt__remote_ip = new TextBox();
+            label1 = new Label();
+            groupBox2 = new GroupBox();
+            check__assigned_ip = new CheckBox();
+            txt__assigned_ip = new TextBox();
+            txt__password = new TextBox();
+            label4 = new Label();
+            txt__group = new TextBox();
+            label3 = new Label();
+            btn__start = new Button();
+            btn__abort = new Button();
+            txt__log = new TextBox();
+            btn__restart = new Button();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txt__remote_port);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txt__remote_ip);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(293, 100);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Supernode";
+            groupBox1.Controls.Add(comboBox__version);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(txt__remote_port);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(txt__remote_ip);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(26, 28);
+            groupBox1.Margin = new Padding(6, 7, 6, 7);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(6, 7, 6, 7);
+            groupBox1.Size = new Size(635, 233);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Supernode";
+            // 
+            // comboBox__version
+            // 
+            comboBox__version.DisplayMember = "3";
+            comboBox__version.FormattingEnabled = true;
+            comboBox__version.Items.AddRange(new object[] { "v1", "v2", "v3" });
+            comboBox__version.Location = new Point(500, 131);
+            comboBox__version.Name = "comboBox__version";
+            comboBox__version.Size = new Size(100, 36);
+            comboBox__version.TabIndex = 5;
+            comboBox__version.Text = "V3";
+            comboBox__version.SelectedIndexChanged += comboBox__version_SelectedIndexChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(500, 72);
+            label5.Margin = new Padding(6, 0, 6, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(88, 28);
+            label5.TabIndex = 4;
+            label5.Text = "Version";
             // 
             // txt__remote_port
             // 
-            this.txt__remote_port.Location = new System.Drawing.Point(214, 57);
-            this.txt__remote_port.Name = "txt__remote_port";
-            this.txt__remote_port.Size = new System.Drawing.Size(53, 21);
-            this.txt__remote_port.TabIndex = 3;
-            this.txt__remote_port.Text = "10001";
+            txt__remote_port.Location = new Point(380, 133);
+            txt__remote_port.Margin = new Padding(6, 7, 6, 7);
+            txt__remote_port.Name = "txt__remote_port";
+            txt__remote_port.Size = new Size(100, 34);
+            txt__remote_port.TabIndex = 3;
+            txt__remote_port.Text = "10001";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(227, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Port";
+            label2.AutoSize = true;
+            label2.Location = new Point(380, 72);
+            label2.Margin = new Padding(6, 0, 6, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(54, 28);
+            label2.TabIndex = 2;
+            label2.Text = "Port";
             // 
             // txt__remote_ip
             // 
-            this.txt__remote_ip.Location = new System.Drawing.Point(16, 57);
-            this.txt__remote_ip.Name = "txt__remote_ip";
-            this.txt__remote_ip.Size = new System.Drawing.Size(151, 21);
-            this.txt__remote_ip.TabIndex = 1;
+            txt__remote_ip.Location = new Point(35, 133);
+            txt__remote_ip.Margin = new Padding(6, 7, 6, 7);
+            txt__remote_ip.Name = "txt__remote_ip";
+            txt__remote_ip.Size = new Size(325, 34);
+            txt__remote_ip.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "IP Address";
+            label1.AutoSize = true;
+            label1.Location = new Point(35, 72);
+            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(118, 28);
+            label1.TabIndex = 0;
+            label1.Text = "IP Address";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.check__assigned_ip);
-            this.groupBox2.Controls.Add(this.txt__assigned_ip);
-            this.groupBox2.Controls.Add(this.txt__password);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txt__group);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(326, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(292, 100);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Edge(Local Settings)";
+            groupBox2.Controls.Add(check__assigned_ip);
+            groupBox2.Controls.Add(txt__assigned_ip);
+            groupBox2.Controls.Add(txt__password);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(txt__group);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Location = new Point(706, 28);
+            groupBox2.Margin = new Padding(6, 7, 6, 7);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(6, 7, 6, 7);
+            groupBox2.Size = new Size(633, 233);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Edge(Local Settings)";
             // 
             // check__assigned_ip
             // 
-            this.check__assigned_ip.AutoSize = true;
-            this.check__assigned_ip.Location = new System.Drawing.Point(27, 76);
-            this.check__assigned_ip.Name = "check__assigned_ip";
-            this.check__assigned_ip.Size = new System.Drawing.Size(90, 16);
-            this.check__assigned_ip.TabIndex = 7;
-            this.check__assigned_ip.Text = "Static IP ?";
-            this.check__assigned_ip.UseVisualStyleBackColor = true;
-            this.check__assigned_ip.CheckedChanged += new System.EventHandler(this.check__assigned_ip_CheckedChanged);
+            check__assigned_ip.AutoSize = true;
+            check__assigned_ip.Location = new Point(59, 177);
+            check__assigned_ip.Margin = new Padding(6, 7, 6, 7);
+            check__assigned_ip.Name = "check__assigned_ip";
+            check__assigned_ip.Size = new Size(136, 32);
+            check__assigned_ip.TabIndex = 7;
+            check__assigned_ip.Text = "Static IP ?";
+            check__assigned_ip.UseVisualStyleBackColor = true;
+            check__assigned_ip.CheckedChanged += check__assigned_ip_CheckedChanged;
             // 
             // txt__assigned_ip
             // 
-            this.txt__assigned_ip.Location = new System.Drawing.Point(122, 74);
-            this.txt__assigned_ip.Name = "txt__assigned_ip";
-            this.txt__assigned_ip.Size = new System.Drawing.Size(144, 21);
-            this.txt__assigned_ip.TabIndex = 8;
-            this.txt__assigned_ip.Visible = false;
+            txt__assigned_ip.Location = new Point(264, 173);
+            txt__assigned_ip.Margin = new Padding(6, 7, 6, 7);
+            txt__assigned_ip.Name = "txt__assigned_ip";
+            txt__assigned_ip.Size = new Size(307, 34);
+            txt__assigned_ip.TabIndex = 8;
+            txt__assigned_ip.Visible = false;
             // 
             // txt__password
             // 
-            this.txt__password.Location = new System.Drawing.Point(123, 47);
-            this.txt__password.Name = "txt__password";
-            this.txt__password.PasswordChar = '*';
-            this.txt__password.Size = new System.Drawing.Size(143, 21);
-            this.txt__password.TabIndex = 3;
-            this.txt__password.Text = "p@ssw0rd";
+            txt__password.Location = new Point(266, 110);
+            txt__password.Margin = new Padding(6, 7, 6, 7);
+            txt__password.Name = "txt__password";
+            txt__password.PasswordChar = '*';
+            txt__password.Size = new Size(305, 34);
+            txt__password.TabIndex = 3;
+            txt__password.Text = "p@ssw0rd";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Password";
+            label4.AutoSize = true;
+            label4.Location = new Point(54, 117);
+            label4.Margin = new Padding(6, 0, 6, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(108, 28);
+            label4.TabIndex = 2;
+            label4.Text = "Password";
             // 
             // txt__group
             // 
-            this.txt__group.Location = new System.Drawing.Point(123, 20);
-            this.txt__group.Name = "txt__group";
-            this.txt__group.Size = new System.Drawing.Size(143, 21);
-            this.txt__group.TabIndex = 1;
-            this.txt__group.Text = "WeGame";
+            txt__group.Location = new Point(266, 47);
+            txt__group.Margin = new Padding(6, 7, 6, 7);
+            txt__group.Name = "txt__group";
+            txt__group.Size = new Size(305, 34);
+            txt__group.TabIndex = 1;
+            txt__group.Text = "WeGame";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 12);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Group";
+            label3.AutoSize = true;
+            label3.Location = new Point(54, 54);
+            label3.Margin = new Padding(6, 0, 6, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(75, 28);
+            label3.TabIndex = 0;
+            label3.Text = "Group";
             // 
             // btn__start
             // 
-            this.btn__start.Location = new System.Drawing.Point(355, 373);
-            this.btn__start.Name = "btn__start";
-            this.btn__start.Size = new System.Drawing.Size(75, 23);
-            this.btn__start.TabIndex = 2;
-            this.btn__start.Text = "Start";
-            this.btn__start.UseVisualStyleBackColor = true;
-            this.btn__start.Click += new System.EventHandler(this.btn__start_Click);
+            btn__start.Location = new Point(769, 870);
+            btn__start.Margin = new Padding(6, 7, 6, 7);
+            btn__start.Name = "btn__start";
+            btn__start.Size = new Size(162, 54);
+            btn__start.TabIndex = 2;
+            btn__start.Text = "Start";
+            btn__start.UseVisualStyleBackColor = true;
+            btn__start.Click += btn__start_Click;
             // 
             // btn__abort
             // 
-            this.btn__abort.Location = new System.Drawing.Point(449, 373);
-            this.btn__abort.Name = "btn__abort";
-            this.btn__abort.Size = new System.Drawing.Size(75, 23);
-            this.btn__abort.TabIndex = 3;
-            this.btn__abort.Text = "Abort";
-            this.btn__abort.UseVisualStyleBackColor = true;
-            this.btn__abort.Click += new System.EventHandler(this.btn__abort_Click);
+            btn__abort.Location = new Point(973, 870);
+            btn__abort.Margin = new Padding(6, 7, 6, 7);
+            btn__abort.Name = "btn__abort";
+            btn__abort.Size = new Size(162, 54);
+            btn__abort.TabIndex = 3;
+            btn__abort.Text = "Abort";
+            btn__abort.UseVisualStyleBackColor = true;
+            btn__abort.Click += btn__abort_Click;
             // 
             // txt__log
             // 
-            this.txt__log.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt__log.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt__log.ForeColor = System.Drawing.Color.White;
-            this.txt__log.Location = new System.Drawing.Point(12, 118);
-            this.txt__log.Multiline = true;
-            this.txt__log.Name = "txt__log";
-            this.txt__log.ReadOnly = true;
-            this.txt__log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt__log.Size = new System.Drawing.Size(606, 249);
-            this.txt__log.TabIndex = 5;
+            txt__log.BackColor = SystemColors.ActiveCaptionText;
+            txt__log.Font = new Font("微软雅黑", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txt__log.ForeColor = Color.White;
+            txt__log.Location = new Point(26, 275);
+            txt__log.Margin = new Padding(6, 7, 6, 7);
+            txt__log.Multiline = true;
+            txt__log.Name = "txt__log";
+            txt__log.ReadOnly = true;
+            txt__log.ScrollBars = ScrollBars.Vertical;
+            txt__log.Size = new Size(1308, 576);
+            txt__log.TabIndex = 5;
             // 
             // btn__restart
             // 
-            this.btn__restart.Location = new System.Drawing.Point(543, 373);
-            this.btn__restart.Name = "btn__restart";
-            this.btn__restart.Size = new System.Drawing.Size(75, 23);
-            this.btn__restart.TabIndex = 6;
-            this.btn__restart.Text = "Restart";
-            this.btn__restart.UseVisualStyleBackColor = true;
-            this.btn__restart.Click += new System.EventHandler(this.btn__restart_Click);
+            btn__restart.Location = new Point(1176, 870);
+            btn__restart.Margin = new Padding(6, 7, 6, 7);
+            btn__restart.Name = "btn__restart";
+            btn__restart.Size = new Size(162, 54);
+            btn__restart.TabIndex = 6;
+            btn__restart.Text = "Restart";
+            btn__restart.UseVisualStyleBackColor = true;
+            btn__restart.Click += btn__restart_Click;
             // 
             // N2N_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 408);
-            this.Controls.Add(this.btn__restart);
-            this.Controls.Add(this.txt__log);
-            this.Controls.Add(this.btn__abort);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn__start);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "N2N_GUI";
-            this.Text = "N2N GUI";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N2N_GUI_FormClosed);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(13F, 28F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1365, 952);
+            Controls.Add(btn__restart);
+            Controls.Add(txt__log);
+            Controls.Add(btn__abort);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Controls.Add(btn__start);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(6, 7, 6, 7);
+            Name = "N2N_GUI";
+            Text = "N2N GUI";
+            FormClosed += N2N_GUI_FormClosed;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt__remote_ip;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt__remote_port;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt__group;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt__password;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btn__start;
-        private System.Windows.Forms.Button btn__abort;
-        private System.Windows.Forms.TextBox txt__log;
-        private System.Windows.Forms.Button btn__restart;
-        private System.Windows.Forms.CheckBox check__assigned_ip;
-        private System.Windows.Forms.TextBox txt__assigned_ip;
+        private GroupBox groupBox1;
+        private TextBox txt__remote_ip;
+        private Label label1;
+        private TextBox txt__remote_port;
+        private Label label2;
+        private GroupBox groupBox2;
+        private TextBox txt__group;
+        private Label label3;
+        private TextBox txt__password;
+        private Label label4;
+        private Button btn__start;
+        private Button btn__abort;
+        private TextBox txt__log;
+        private Button btn__restart;
+        private CheckBox check__assigned_ip;
+        private TextBox txt__assigned_ip;
+        private Label label5;
+        private ComboBox comboBox__version;
     }
 }
 
